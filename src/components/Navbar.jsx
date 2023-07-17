@@ -1,7 +1,6 @@
 import './Navbar.css';
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Image from 'next/image';
 
 function Navbar() {
   const history = useHistory();
@@ -52,11 +51,7 @@ function Navbar() {
       {(showMobile || !isMobile || dropdown) && (
         <ul className={`nav ${dropdown ? 'open' : ''}`}>
           <li>
-            <Image 
-              src='/flogo.png'
-              height={30}
-              width={30}
-            />
+         
           </li>
           <li>
             <Link to="/" onClick={() => handleNavLinkClick('/')}>
