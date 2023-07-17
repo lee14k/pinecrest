@@ -1,9 +1,9 @@
 import './Navbar.css';
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
-  const history = useHistory();
+  const history = useNavigate();
   const [dropdown, setDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
