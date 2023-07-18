@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [dropdown, setDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
@@ -34,7 +34,7 @@ function Navbar() {
   };
 
   const handleNavLinkClick = (route) => {
-    history.push(route);
+    navigate(route);
     setDropdown(false);
     setShowMobile(false);
   };
@@ -51,7 +51,7 @@ function Navbar() {
       {(showMobile || !isMobile || dropdown) && (
         <ul className={`nav ${dropdown ? 'open' : ''}`}>
           <li>
-         
+            {/* Add your content here */}
           </li>
           <li>
             <Link to="/" onClick={() => handleNavLinkClick('/')}>
@@ -59,86 +59,15 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => handleNavLinkClick('/about')}>
-              About
+            <Link to="/Ourmission" onClick={() => handleNavLinkClick('/Ourmission')}>
+              Our Mission
             </Link>
           </li>
           <li>Contact Us</li>
-          <li onClick={handleDropdownClick} className={`dropdown-item ${dropdown ? 'open' : ''}`}>
-            Cottages
-          </li>
-          {dropdown && (
-            <ul>
-              <li>
-                <Link to="/thelodge" onClick={() => handleNavLinkClick('/thelodge')}>
-                  The Lodge
-                </Link>
-              </li>
-              <li>
-                <Link to="/sunrisesuite" onClick={() => handleNavLinkClick('/sunrisesuite')}>
-                  Sunrise Suite
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottageone" onClick={() => handleNavLinkClick('/cottageone')}>
-                  Cottage One
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottagetwo" onClick={() => handleNavLinkClick('/cottagetwo')}>
-                  Cottage Two
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottagethree" onClick={() => handleNavLinkClick('/cottagethree')}>
-                  Cottage Three
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottagefour" onClick={() => handleNavLinkClick('/cottagefour')}>
-                  Cottage Four
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottagefive" onClick={() => handleNavLinkClick('/cottagefive')}>
-                  Cottage Five
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottagesix" onClick={() => handleNavLinkClick('/cottagesix')}>
-                  Cottage Six
-                </Link>
-              </li>
-              <li>
-                <Link to="/cottageseven" onClick={() => handleNavLinkClick('/cottageseven')}>
-                  Cottage Seven
-                </Link>
-              </li>
-              <li>
-                <Link to="/moteleight" onClick={() => handleNavLinkClick('/moteleight')}>
-                  Motel Eight
-                </Link>
-              </li>
-              <li>
-                <Link to="/motelnine" onClick={() => handleNavLinkClick('/motelnine')}>
-                  Motel Nine
-                </Link>
-              </li>
-              <li>
-                <Link to="/motelten" onClick={() => handleNavLinkClick('/motelten')}>
-                  Motel Ten
-                </Link>
-              </li>
-              <li>
-                <Link to="/fishshack" onClick={() => handleNavLinkClick('/fishshack')}>
-                  Fish Shack
-                </Link>
-              </li>
-            </ul>
-          )}
+          <li>Services</li>
           <li>Policies</li>
-          <li>Reserve your Stay</li>
-          <li>Local Attractions</li>
+          <li>Directions</li>
+          <li>Careers</li>
         </ul>
       )}
     </div>
