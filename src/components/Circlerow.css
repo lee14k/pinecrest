@@ -25,21 +25,44 @@
 
 
   .one {
-    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%), url('../assets/people1.jpeg');
+    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%), url('../assets/pinecrestcirc1.jpeg');
     background-size:cover;
+    background-position: center;
     
   }
 
   .two {
-    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%),url('../assets/people2.jpeg');
+    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%),url('../assets/pinecrestcirc2.jpeg');
     background-size:cover;
+    background-position: center;
+
     
   }
 
   .three {
-    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%),url('../assets/people3.jpeg');
+    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%),url('../assets/pinecrestcirc3.jpeg');
     background-size:cover;
     
   }
 
-  
+  .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .circlewrapper {
+      flex-direction: column;
+    }
+    
+    .circle {
+      margin-bottom: 20px;
+    }
+    
+    .circleheadlines {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

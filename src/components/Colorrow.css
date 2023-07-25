@@ -10,12 +10,9 @@
 }
 
 .biggerwrapper {
-    background-image: url('src/assets/texturepine2.png');
+    background-image: radial-gradient(circle, rgba(86,128,82,0.7) 0%, rgba(255,255,255,1) 100%), url('src/assets/texturepine2.png');
 }
 
-.biggerwrapper::before {
-    opacity:0.5;
-}
 
 .roadsign {
     height:400px;

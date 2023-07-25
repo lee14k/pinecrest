@@ -5,7 +5,9 @@ function Colorrow () {
         <div className="bigwrapper">
     <img className="roadsign"src='src/assets/pinecrestsign.jpeg'/>
 <div className="textwrapper">
-<h2>Comfortable and social</h2>
+<h2>Headline One</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, modi aliquid dolorem, iure veniam illo aperiam voluptatum voluptate repellendus debitis laboriosam. Rem, unde amet vero neque atque animi similique. Amet?</p>
+<h2>Headline Two</h2>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, modi aliquid dolorem, iure veniam illo aperiam voluptatum voluptate repellendus debitis laboriosam. Rem, unde amet vero neque atque animi similique. Amet?</p>
 </div>
 <div>

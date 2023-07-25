@@ -1,19 +1,40 @@
 .headbannerwrapper {
-    background-image: linear-gradient(4deg, rgba(165,187,151,1) 5%, rgba(157,187,139,0.5) 31%, rgba(98,147,69,0.5) 66%),
-    url('../assets/banner.jpeg');
+    background-image: linear-gradient(263deg, rgba(211,206,61,0.7) 0%, rgba(255, 255, 255, 0.82) 54%), url('../assets/banner.jpeg');
     background-size:cover;
     background-position:center;
     width:100%;
-    height:500px;
+    height:700px;
     display: flex;
+    gap:50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:white;
+    color:rgba(98,147,69,1);
+    margin-bottom:50px;
+    box-sizing: border-box;
+    padding-bottom:50px;
 }
 
 .phonebutton {
-    width:100px;
-    height:150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    width:250px;
+    height:50px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(148,105,148,1);
+-moz-box-shadow: 10px 10px 5px 0px rgba(148,105,148,1);
+box-shadow: 10px 10px 5px 0px rgba(148,105,148,1);
+border-radius:30px;
+border:none;
 }
 
+.phoneicon {
+    width:25px;
+    height:250x;
+}
+
+.logo {
+    height:280px;
+    width:auto;
+}
