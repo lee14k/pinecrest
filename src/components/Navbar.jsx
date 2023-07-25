@@ -64,9 +64,16 @@ function Navbar() {
             </Link>
           </li>
           <li>Contact Us</li>
-          <li>Services</li>
-          <li>Policies</li>
+          <li>
+          <Link to="/Services" onClick={() => handleNavLinkClick('/Services')}>
+
+            Services
+            </Link>
+
+            </li>
           <li>Directions</li>
+          <li>Photos</li>
+
           <li>Careers</li>
         </ul>
       )}

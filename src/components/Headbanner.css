@@ -27,6 +27,7 @@
 box-shadow: 10px 10px 5px 0px rgba(148,105,148,1);
 border-radius:30px;
 border:none;
+font-size:large;
 }
 
 .phoneicon {
@@ -37,4 +38,11 @@ border:none;
 .logo {
     height:280px;
     width:auto;
+}
+
+@media (max-width: 900px) {
+    .logo {
+        max-width: 300px;
+        height:auto;
+    }
 }

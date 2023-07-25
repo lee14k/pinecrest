@@ -1,18 +1,34 @@
-import './Footer.css'
-function Footer () {
-    return (
-        <div className="footercontainer">
-            <h1>Pinecrest of Lake Geneva</h1>
-            <ul>
-                <li>Accessibility</li>
-                <li>Privacy</li>
+import './Footer.css';
 
-            </ul>
-            <h2>Contact Us</h2>
-            <h2>Call to schedule a tour</h2>
+function Footer() {
+  return (
+    <div className="footercontainer">
+      {/* Column 1 - Pinecrest of Lake Geneva header */}
+      <div className="column">
+<img className="footlogo" src="../assets/newpclogo.png"/>      </div>
 
-        </div>
-    )
+      {/* Column 2 - Unordered list */}
+   
+
+      {/* Column 3 - Contact header and "Call us now" */}
+      <div className="column">
+        <h2 className='foothead2'>Contact Us</h2>
+        <h3 className='foothead3'>
+Find us on Facebook        </h3>
+      </div>
+
+      <div className="column">
+        <ul>
+
+        <li>Services</li>
+        <li>Directions</li>
+        <li>Careers</li>
+          <li>Accessibility</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;

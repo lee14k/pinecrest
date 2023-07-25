@@ -7,7 +7,7 @@ function Headbanner () {
     <button className='phonebutton'>
     <img src='src/assets/phoneicon.png' className='phoneicon'/>
 
-        Call us to schedule a visit</button>
+        Schedule a visit</button>
 </div>
     )
 }

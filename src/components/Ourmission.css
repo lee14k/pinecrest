@@ -1,0 +1,11 @@
+.missioncontainer {
+    display:flex;
+    padding-top:100px;
+}
+
+.reviewcontainer {
+    display:grid;
+    gap:30px;
+    grid-template-columns: repeat(2,1fr);
+    width:100%;
+}

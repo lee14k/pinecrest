@@ -1,4 +1,39 @@
 .footercontainer {
+    display: flex;
+    justify-content: space-around;
     padding-top:90px;
     background: rgb(211,206,61);
-    background: linear-gradient(0deg, rgba(211,206,61,1) 0%, rgba(255,255,255,1) 100%);}
+    background: linear-gradient(0deg, rgba(211,206,61,1) 0%, rgba(255,255,255,1) 100%);
+    gap:50px;
+}
+
+    .phoneicon {
+        width:14px;
+        height:auto;
+        margin-right:10px;
+    }
+      
+      .column {
+        flex: 1;
+        margin: 0 10px;
+      }
+      
+      ul {
+        list-style: none;
+      }
+      
+      .foothead1 {
+        font-size:20px;
+      }
+
+      .foothead2 {
+        font-size:16px;
+      }
+
+      .foothead3 {
+        font-size:14px;
+      }
+
+      .footlogo {
+        width:200px;
+      }
