@@ -3,7 +3,7 @@ function Ourmission() {
     return (
       <div>
       <div className="missioncontainer">
-         <img src="src/assets/people2.jpeg" alt="" />
+         <img src="/people2.jpeg" alt="" />
      <div className="textcontainer">
     <h1>Our Mission</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugit optio ut. Dolores expedita officia quos quae velit, harum dolorum distinctio dolor provident voluptate molestiae, facilis suscipit deleniti architecto saepe?</p>

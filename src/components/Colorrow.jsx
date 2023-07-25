@@ -3,7 +3,7 @@ function Colorrow () {
     return (
         <div className='biggerwrapper'>
         <div className="bigwrapper">
-    <img className="roadsign"src='src/assets/pinecrestsign.jpeg'/>
+    <img className="roadsign"src='/pinecrestsign.jpeg'/>
 <div className="textwrapper">
 <h2>Headline One</h2>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, modi aliquid dolorem, iure veniam illo aperiam voluptatum voluptate repellendus debitis laboriosam. Rem, unde amet vero neque atque animi similique. Amet?</p>
