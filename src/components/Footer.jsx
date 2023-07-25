@@ -1,11 +1,10 @@
 import './Footer.css';
-
 function Footer() {
   return (
     <div className="footercontainer">
       {/* Column 1 - Pinecrest of Lake Geneva header */}
       <div className="column">
-<img className="footlogo" src="../assets/newpclogo.png"/>      </div>
+<img className="footlogo" src="/newpclogo.png"/>      </div>
 
       {/* Column 2 - Unordered list */}
    
