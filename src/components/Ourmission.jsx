@@ -1,4 +1,4 @@
-import './ourmission.css'
+import './Ourmission.css'
 function Ourmission() {
     return (
       <div>
