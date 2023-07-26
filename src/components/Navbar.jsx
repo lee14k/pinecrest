@@ -63,7 +63,11 @@ function Navbar() {
               Our Mission
             </Link>
           </li>
+          <Link to="/Contactus" onClick={() => handleNavLinkClick('/Contactus')}>
+
           <li>Contact Us</li>
+          </Link>
+
           <li>
           <Link to="/Services" onClick={() => handleNavLinkClick('/Services')}>
 
@@ -71,10 +75,19 @@ function Navbar() {
             </Link>
 
             </li>
+            <Link to="/Directions" onClick={() => handleNavLinkClick('/Directions')}>
           <li>Directions</li>
+          </Link>
+
+          <Link to="/Photos" onClick={() => handleNavLinkClick('/Photos')}>
+
           <li>Photos</li>
+</Link>
+<Link to="/Careers" onClick={() => handleNavLinkClick('/Careers')}>
 
           <li>Careers</li>
+
+          </Link>
         </ul>
       )}
     </div>
