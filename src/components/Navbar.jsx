@@ -1,6 +1,6 @@
-import './Navbar.css';
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import "./Navbar.css";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -14,13 +14,13 @@ function Navbar() {
     };
 
     // Add event listener to handle window resize
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Check initial window width on component mount
     handleResize();
 
     // Cleanup the event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleHamburger = () => {
@@ -41,52 +41,59 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      {typeof window !== 'undefined' && isMobile && (
-        <div className={`hamburger-icon ${showMobile && !dropdown ? 'open' : ''}`} onClick={toggleHamburger}>
+      {typeof window !== "undefined" && isMobile && (
+        <div
+          className={`hamburger-icon ${showMobile && !dropdown ? "open" : ""}`}
+          onClick={toggleHamburger}
+        >
           <div className="line" />
           <div className="line" />
           <div className="line" />
         </div>
       )}
       {(showMobile || !isMobile || dropdown) && (
-        <ul className={`nav ${dropdown ? 'open' : ''}`}>
+        <ul className={`nav ${dropdown ? "open" : ""}`}>
+          <li>{/* Add your content here */}</li>
           <li>
-            {/* Add your content here */}
-          </li>
-          <li>
-            <Link to="/" onClick={() => handleNavLinkClick('/')}>
+            <Link to="/" onClick={() => handleNavLinkClick("/")}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/Ourmission" onClick={() => handleNavLinkClick('/Ourmission')}>
+            <Link
+              to="/Ourmission"
+              onClick={() => handleNavLinkClick("/Ourmission")}
+            >
               Our Mission
             </Link>
           </li>
-          <Link to="/Contactus" onClick={() => handleNavLinkClick('/Contactus')}>
-
-          <li>Contact Us</li>
+          <Link
+            to="/Contactus"
+            onClick={() => handleNavLinkClick("/Contactus")}
+          >
+            <li>Contact Us</li>
           </Link>
 
           <li>
-          <Link to="/Services" onClick={() => handleNavLinkClick('/Services')}>
-
-            Services
+            <Link
+              to="/Services"
+              onClick={() => handleNavLinkClick("/Services")}
+            >
+              Services
             </Link>
-
-            </li>
-            <Link to="/Directions" onClick={() => handleNavLinkClick('/Directions')}>
-          <li>Directions</li>
+          </li>
+          <Link
+            to="/Directions"
+            onClick={() => handleNavLinkClick("/Directions")}
+          >
+            <li>Directions</li>
           </Link>
 
-          <Link to="/Photos" onClick={() => handleNavLinkClick('/Photos')}>
-
-          <li>Photos</li>
-</Link>
-<Link to="/Careers" onClick={() => handleNavLinkClick('/Careers')}>
-
-          <li>Careers</li>
-
+          <Link to="/Photos" onClick={() => handleNavLinkClick("/Photos")}>
+            <li>Photos</li>
+          </Link>
+          <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
+            <li>Careers</li>
           </Link>
         </ul>
       )}

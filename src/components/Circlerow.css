@@ -1,68 +1,80 @@
 .circlewrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-  }
-  
-  .circle {
-    background-color: #a7bfa0;
-    width: 300px;
-    height: 300px;
-    border-radius: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .circleheadlines {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 300px;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
 
+.circle {
+  background-color: #a7bfa0;
+  width: 300px;
+  height: 300px;
+  border-radius: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .one {
-    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%), url('/pinecrestcirc1.jpeg');
-    background-size:cover;
-    background-position: center;
-    
-  }
+.circleheadlines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+}
 
-  .two {
-    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%),url('/pinecrestcirc2.jpeg');
-    background-size:cover;
-    background-position: center;
+.one {
+  background-image: linear-gradient(
+      4deg,
+      rgba(165, 187, 151, 0.5) 5%,
+      rgba(157, 187, 139, 0.8) 31%,
+      rgba(98, 147, 69, 0.5) 66%
+    ),
+    url("/pinecrestcirc1.jpeg");
+  background-size: cover;
+  background-position: center;
+}
 
-    
-  }
+.two {
+  background-image: linear-gradient(
+      4deg,
+      rgba(165, 187, 151, 0.5) 5%,
+      rgba(157, 187, 139, 0.8) 31%,
+      rgba(98, 147, 69, 0.5) 66%
+    ),
+    url("/pinecrestcirc2.jpeg");
+  background-size: cover;
+  background-position: center;
+}
 
-  .three {
-    background-image: linear-gradient(4deg, rgba(165,187,151,0.5) 5%, rgba(157,187,139,0.8) 31%, rgba(98,147,69,0.5) 66%),url('/pinecrestcirc3.jpeg');
-    background-size:cover;
-    
-  }
+.three {
+  background-image: linear-gradient(
+      4deg,
+      rgba(165, 187, 151, 0.5) 5%,
+      rgba(157, 187, 139, 0.8) 31%,
+      rgba(98, 147, 69, 0.5) 66%
+    ),
+    url("/pinecrestcirc3.jpeg");
+  background-size: cover;
+}
 
-  .circle-container {
-    display: flex;
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .circlewrapper {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .circle {
+    margin-bottom: 20px;
+  }
+
+  .circleheadlines {
+    flex-direction: column;
     gap: 10px;
   }
-
-  @media screen and (max-width: 900px) {
-    .circlewrapper {
-      flex-direction: column;
-    }
-    
-    .circle {
-      margin-bottom: 20px;
-    }
-    
-    .circleheadlines {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
+}
