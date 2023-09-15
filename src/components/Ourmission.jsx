@@ -1,4 +1,6 @@
 import "./Ourmission.css";
+import FAQ from "./FAQ";
+import Footer from "./Footer";
 function Ourmission() {
   return (
     <div>
@@ -15,17 +17,11 @@ function Ourmission() {
           <button className="phonebutton">Contact us today</button>
         </div>
       </div>
-      <h1>Here's what people are saying about Pinecrest</h1>
-      <div className="reviewcontainer">
-        <div>Review Box</div>
-        <div>Review Box</div>
-        <div>Review Box</div>
-        <div>Review Box</div>
-        <div>Review Box</div>
-        <div>Review Box</div>
-      </div>
+<FAQ/>  
+<Footer/>  
     </div>
   );
 }
 
 export default Ourmission;
+
