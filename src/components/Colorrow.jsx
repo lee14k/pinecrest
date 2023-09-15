@@ -5,19 +5,13 @@ function Colorrow() {
       <div className="bigwrapper">
         <img className="roadsign" src="/pinecrestsign.jpeg" />
         <div className="textwrapper">
-          <h2>Headline One</h2>
+          <h2>Personalized Care</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus,
-            modi aliquid dolorem, iure veniam illo aperiam voluptatum voluptate
-            repellendus debitis laboriosam. Rem, unde amet vero neque atque
-            animi similique. Amet?
+          Located in Lake Geneva, Pinecrest offers a bright atmosphere where our caring staff provides service to 12 residents. Our small adult living facility offers high levels of personalized services.
           </p>
-          <h2>Headline Two</h2>
+          <h2>Community Livign</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus,
-            modi aliquid dolorem, iure veniam illo aperiam voluptatum voluptate
-            repellendus debitis laboriosam. Rem, unde amet vero neque atque
-            animi similique. Amet?
+            Our common areas have all the comforts of home where social activities are offered daily. Residents are free from the day to day responsibilities and can retire to private rooms decorated like home.
           </p>
         </div>
         <div></div>
