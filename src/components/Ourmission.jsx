@@ -4,10 +4,10 @@ import Footer from "./Footer";
 function Ourmission() {
   return (
     <div>
+                <h1 className="text-6xl">Our Mission</h1>
       <div className="missioncontainer">
         <img src="/people2.jpeg" alt="" />
         <div className="textcontainer">
-          <h1>Our Mission</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             fugit optio ut. Dolores expedita officia quos quae velit, harum

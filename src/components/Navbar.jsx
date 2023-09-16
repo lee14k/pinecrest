@@ -89,9 +89,6 @@ function Navbar() {
             <li>Directions</li>
           </Link>
 
-          <Link to="/Photos" onClick={() => handleNavLinkClick("/Photos")}>
-            <li>Photos</li>
-          </Link>
           <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
             <li>Careers</li>
           </Link>
