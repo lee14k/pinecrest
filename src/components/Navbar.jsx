@@ -53,13 +53,13 @@ function Navbar() {
       )}
       {(showMobile || !isMobile || dropdown) && (
         <ul className={`nav ${dropdown ? "open" : ""}`}>
-          <li>{/* Add your content here */}</li>
-          <li>
+        
+          <li className="text-2xl">
             <Link to="/" onClick={() => handleNavLinkClick("/")}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="text-2xl">
             <Link
               to="/Ourmission"
               onClick={() => handleNavLinkClick("/Ourmission")}
@@ -71,10 +71,10 @@ function Navbar() {
             to="/Contactus"
             onClick={() => handleNavLinkClick("/Contactus")}
           >
-            <li>Contact Us</li>
+            <li className="text-2xl">Contact Us</li>
           </Link>
 
-          <li>
+          <li className="text-2xl">
             <Link
               to="/Services"
               onClick={() => handleNavLinkClick("/Services")}
@@ -85,7 +85,7 @@ function Navbar() {
           
 
           <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
-            <li>Careers</li>
+            <li className="text-2xl">Careers</li>
           </Link>
         </ul>
       )}

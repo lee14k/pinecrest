@@ -1,8 +1,8 @@
 .nav {
     display: flex;
-    gap: 20px;
     justify-content: space-evenly;
     list-style: none;
+    padding:50px;
   }
   
   .navbar .hamburger-icon {
@@ -34,4 +34,5 @@
   .hamburger-icon.open .line:last-child {
     transform: translateY(-8px) rotate(-45deg);
   }
+  
   
