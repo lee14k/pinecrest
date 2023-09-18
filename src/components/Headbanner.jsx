@@ -1,15 +1,43 @@
 import "./Headbanner.css";
+import React, { useState, useEffect } from "react";
+
+const images = [
+  './banner.jpeg', // replace with your image URLs
+  './bedroom.jpeg', 
+  './commonarea.jpeg',
+  // add more URLs as needed
+];
+
 function Headbanner() {
+   const [activeIndex, setActiveIndex] = useState(0);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setActiveIndex((prevIndex) => 
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 3000); // Change slide every 3 seconds
+  
+      return () => clearInterval(interval);
+    }, [activeIndex]);
+  
   return (
-    <div className="headbannerwrapper">
-      <img src="/newpclogo.png" alt="" className="logo" />
-      <h1>Quality Assisted Living for Older Adults</h1>
-      <a href="tel:+2622498900">
-        <button className="phonebutton">
-          <img src="/phoneicon.png" className="phoneicon" />
-          Schedule a visit
-        </button>
-      </a>
+    <div className="slideshow">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`slide ${index === activeIndex ? "active" : ""}`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
+    <div className="header-content">
+  <img
+    src="/piecrest.png"
+    className="overlay-logo"
+  />
+
+          
+</div>
     </div>
   );
 }

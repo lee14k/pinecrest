@@ -1,9 +1,10 @@
 import Servicesgrid from "./Servicesgrid"
+import Footer from "./Footer"
 export default function Services () {
     return (
         <div>
-        <h1>Services</h1>
         <Servicesgrid/>
+        <Footer/>
         </div>
     )
 }

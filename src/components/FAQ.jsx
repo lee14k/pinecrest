@@ -3,11 +3,26 @@ import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "Do we offer short stay or respite services?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Yes, based on available rooms at the time services are requested.",
+  }, {
+    question: "Are the rooms private?",
+    answer:
+      "Yes, each of our twelve resident rooms are spacious and private and can be decorated based on the resident’s style.",
+  }, {
+    question: "Is there a bathroom inside each room?",
+    answer:
+      "Yes. Each bathroom offers a sink and vanity area as well as a toilet equipped with safety grab bars for support and an easily accessible pull cord alert system.",
+  }, {
+    question: "Can I continue seeing my own doctor?",
+    answer:
+      "It is every resident’s right to continue seeing his / her own doctor if they so choose. Usually a resident will utilize one of the many quality physicians in the near by surrounding area as a matter of convenience. If at any time any of our residents wish to switch doctors for whatever reason our staff will gladly assist in locating and setting up all appointments. Pinecrest utilizes a Podiatrist who can treat resident foot care on site.",
+  },{
+    question: "Will my loved one have to move if their health condition changes?",
+    answer:
+      "Not necessarily. Although no one can predict what happens with their health but we do strive to continue to provide top quality support and services to each resident here at Pinecrest even in the event of a health status change. Our staff will stay in contact with families, and legal representatives along the way so as to determine the most appropriate care options available.",
   },
-  // More questions...
 ]
 
 export default function FAQ() {

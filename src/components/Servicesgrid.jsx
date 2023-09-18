@@ -1,49 +1,75 @@
+import { useState } from "react";
+
 export default function Servicesgrid() {
   // Define the services data
   const services = [
     {
-      title: 'Meals',
-      link: '/mediation',
-      className: 'griditem',
-      description:'Our nursing staff is available 24 hours a day, 7 days a week to provide care and assistance to our residents. Our nursing staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers.'
+      title: "Meals",
+      link: "/mediation",
+      className: "griditem",
+      description:
+        "Our nursing staff is available 24 hours a day, 7 days a week to provide care and assistance to our residents. Our nursing staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers.",
     },
     {
-      title: 'Housekeeping',
-      link: '/organizationalculture',
-      className: 'griditem miditem',
-      description:'Pinecrest offers a variety of amenities to our residents, including three home-cooked meals a day, snacks, laundry services, housekeeping services, and assistance with activities of daily living. We also offer a variety of social activities, including bingo, crafts, and outings to local restaurants and stores.'
+      title: "Housekeeping",
+      link: "/organizationalculture",
+      className: "griditem miditem",
+      description:
+        "Pinecrest offers a variety of amenities to our residents, including three home-cooked meals a day, snacks, laundry services, housekeeping services, and assistance with activities of daily living. We also offer a variety of social activities, including bingo, crafts, and outings to local restaurants and stores.",
     },
     {
-      title: 'Grooming',
-      link: '/arbitration',
-      className: 'griditem',
-      description:'Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.'
+      title: "Grooming",
+      link: "/arbitration",
+      className: "griditem",
+      description:
+        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.",
     },
-     {
-      title: 'Nursing Services',
-      link: '/arbitration',
-      className: 'griditem',
-      description:'Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.'
-    },{
-      title: 'Activities',
-      link: '/arbitration',
-      className: 'griditem',
-      description:'Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.'
-    },{
-      title: 'Spiritual Services',
-      link: '/arbitration',
-      className: 'griditem',
-     
+    {
+      title: "Nursing Services",
+      link: "/arbitration",
+      className: "griditem",
+      description:
+        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.",
+    },
+    {
+      title: "Activities",
+      link: "/arbitration",
+      className: "griditem",
+      description:
+        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.",
+    },
+    {
+      title: "Spiritual Services",
+      link: "/arbitration",
+      className: "griditem",
     },
   ];
 
+  const [flipStates, setFlipStates] = useState(
+    new Array(services.length).fill(false)
+  );
+  const handleFlip = (index) => {
+    const newFlipStates = [...flipStates];
+    newFlipStates[index] = !newFlipStates[index];
+    setFlipStates(newFlipStates);
+  };
   return (
     <div>
-      <div className="gridwrapper">
-        {services.map(service => (
-          <div className={service.className} key={service.title}>
+      <div className="gridwrapper front">
+        {services.map((service, index) => (
+          <div
+            className={`${service.className} ${
+              flipStates[index] ? "flip" : ""
+            }`}
+            key={service.title}
+          >
             <h2 className="gridhead">{service.title}</h2>
-              <button className="gridbutton">Read more</button>
+            <button className="gridbutton" onClick={() => handleFlip(index)}>
+              Read more
+            </button>
+
+            <div className="back" onClick={() => handleFlip(index)}>
+            </div>
           </div>
         ))}
       </div>

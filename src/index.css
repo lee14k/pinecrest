@@ -23,3 +23,57 @@ body {
   margin-right:10px;
   align-items:center;
 }
+
+/* Grid layout */
+.gridwrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.griditem {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  perspective: 1000px; /* Create 3D effect */
+  position: relative;
+}
+
+/* Flip Card Effect */
+.griditem .gridhead,
+.griditem .gridbutton {
+  z-index: 1;
+  position: relative;
+}
+
+.griditem .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  backface-visibility: hidden; /* Hide the back side of the card */
+  transform: rotateY(180deg); /* Rotate the back side of the card out of view */
+  transition: opacity 0.5s, transform 0.5s;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.griditem.flip .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.griditem.flip .gridhead,
+.griditem.flip .gridbutton {
+  opacity: 0;
+}
+
+.spec {
+  background:linear-gradient(263deg, rgba(211,206,61,0.7) 0%, rgba(255, 255, 255, 0.82) 54%)
+}
