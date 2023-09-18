@@ -52,7 +52,7 @@ function Navbar() {
         </div>
       )}
       {(showMobile || !isMobile || dropdown) && (
-        <ul className={`nav ${dropdown ? "open" : ""}`}>
+<ul className={`nav ${dropdown ? "open" : ""} ${isMobile ? "mobile" : ""}`}>
         
           <li className="text-2xl">
             <Link to="/" onClick={() => handleNavLinkClick("/")}>
