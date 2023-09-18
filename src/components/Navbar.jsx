@@ -82,12 +82,7 @@ function Navbar() {
               Services
             </Link>
           </li>
-          <Link
-            to="/Directions"
-            onClick={() => handleNavLinkClick("/Directions")}
-          >
-            <li>Directions</li>
-          </Link>
+          
 
           <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
             <li>Careers</li>
