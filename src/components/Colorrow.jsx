@@ -34,9 +34,9 @@ Contact Us              </a>
               
             </div>
           </div>
-          <div className="relative mt-16 h-80">
+          <div className="relative mt-16 h-80 ml-30  ">
             <img
-              className="absolute left-0 top-0 w-[27rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              className="absolute left-0 top-0 w-[27rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10 mr-10 ml-10"
               src="/homeone.jpeg"
               width={1824}
               height={1080}

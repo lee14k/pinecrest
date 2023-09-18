@@ -8,40 +8,46 @@ export default function Servicesgrid() {
       link: "/mediation",
       className: "griditem",
       description:
-        "Our nursing staff is available 24 hours a day, 7 days a week to provide care and assistance to our residents. Our nursing staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers.",
+        "Three nutritional home cooked meals and snacks daily, can be tailored and customized to meet resident needs.",
+      img: "/meals.jpeg",
     },
     {
       title: "Housekeeping",
       link: "/organizationalculture",
       className: "griditem miditem",
-      description:
-        "Pinecrest offers a variety of amenities to our residents, including three home-cooked meals a day, snacks, laundry services, housekeeping services, and assistance with activities of daily living. We also offer a variety of social activities, including bingo, crafts, and outings to local restaurants and stores.",
+      description: "Bed and bath linens provided and laundered regularly.",
+      img: "/bedroom.jpeg",
     },
     {
       title: "Grooming",
       link: "/arbitration",
       className: "griditem",
-      description:
-        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.",
+      description: "On site beautician and barber services.",
+      img: "/missiongrid2.jpeg",
     },
     {
       title: "Nursing Services",
       link: "/arbitration",
       className: "griditem",
       description:
-        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.",
+        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers.",
+      img: "/nursing.jpeg",
     },
     {
       title: "Activities",
       link: "/arbitration",
       className: "griditem",
       description:
-        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers. Our staff is also trained to provide care to residents with dementia and other cognitive impairments.",
+        "With social activities including pet therapy, comfortable visitng areas for friends and family, and visiting entertainment, there is something for every resident here at Pinecrest of Lake Geneva",
+      img: "/activities.jpeg",
     },
     {
       title: "Spiritual Services",
       link: "/arbitration",
       className: "griditem",
+      img: "/spiritual.jpeg",
+           description:
+        "Visiting clergy and spiritual services are available to all residents.",
     },
   ];
 
@@ -55,20 +61,26 @@ export default function Servicesgrid() {
   };
   return (
     <div>
-      <div className="gridwrapper front">
+      <div className="gridwrapper front ">
         {services.map((service, index) => (
           <div
+            onClick={() => handleFlip(index)}
             className={`${service.className} ${
               flipStates[index] ? "flip" : ""
             }`}
             key={service.title}
+            style={{
+              backgroundImage: `url(${
+                service.img || "default_image_path_here.jpg"
+              })`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
             <h2 className="gridhead">{service.title}</h2>
-            <button className="gridbutton" onClick={() => handleFlip(index)}>
-              Read more
-            </button>
 
             <div className="back" onClick={() => handleFlip(index)}>
+              {service.description}
             </div>
           </div>
         ))}

@@ -7,6 +7,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}"// <= no spaces
   ],
   theme: {
+    
     extend: {},
   },
   plugins: [],

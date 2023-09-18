@@ -66,7 +66,7 @@
   margin-right: 10px; /* some spacing between the logo and the heading */
 }
 
-.overlay-heading {
+.overlay-button {
   z-index: 2; /* ensure heading is also on top */
   margin: 0; /* remove default margin from h1 */
   font-size: 24px; /* adjust size as per your need */

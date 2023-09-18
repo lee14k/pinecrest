@@ -77,3 +77,17 @@ body {
 .spec {
   background:linear-gradient(263deg, rgba(211,206,61,0.7) 0%, rgba(255, 255, 255, 0.82) 54%)
 }
+
+.gridhead {
+  font-size:2rem;
+  color:white;
+text-shadow: 2px 2px 4px #000000;
+}
+
+@media screen and (max-width: 1200px) {
+.gridwrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+}
