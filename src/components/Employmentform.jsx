@@ -159,12 +159,61 @@ export default function Employmentform() {
             type="text"
             name={`company-${index}`}
             id={`company-${index}`}
-            placeholder="ABC Corp."
+            placeholder="Company name"
             value={history.company}
             // ... onChange handler to update this specific history's company value
             className="block w-full ..."
           />
-          
+           <input
+            type="text"
+            name={`company-${index}`}
+            id={`company-${index}`}
+            placeholder="Position"
+            value={history.company}
+            // ... onChange handler to update this specific history's company value
+            className="block w-full ..."
+          />
+           <input
+            type="text"
+            name={`company-${index}`}
+            id={`company-${index}`}
+            placeholder="Date Started"
+            value={history.company}
+            // ... onChange handler to update this specific history's company value
+            className="block w-full ..."
+          />
+           <input
+            type="text"
+            name={`company-${index}`}
+            id={`company-${index}`}
+            placeholder="Date Ended"
+            value={history.company}
+            // ... onChange handler to update this specific history's company value
+            className="block w-full ..."
+          />
+           <input
+            type="text"
+            name={`company-${index}`}
+            id={`company-${index}`}
+            placeholder="Job duties"
+            value={history.company}
+            // ... onChange handler to update this specific history's company value
+            className="block w-full ..."
+          />
+           <label
+    htmlFor="currently-employed"
+    className="ml-3 block text-sm font-medium text-gray-900"
+  >
+Currently employed  </label>
+           <input
+            type="checkbox"
+            name={`company-${index}`}
+            id={`company-${index}`}
+            placeholder="Current Position?"
+            value={history.company}
+            // ... onChange handler to update this specific history's company value
+            className="block w-full ..."
+          />
           {/* ... Similarly, input fields for "Position" and "Duration" */}
           
         </div>

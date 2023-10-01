@@ -5,8 +5,11 @@ import Missiongrid from "./Missiongrid";
 function Ourmission() {
   return (
     <div>
+
      <Missiongrid/>
+     <a id="FAQ">
 <FAQ/>  
+</a>
 <Footer/>  
     </div>
   );

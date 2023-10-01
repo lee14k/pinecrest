@@ -83,9 +83,20 @@ function Navbar() {
             </Link>
           </li>
           
+          <li className="text-2xl">
+            <Link
+              to="Ourmission/#FAQ"
+              onClick={() => handleNavLinkClick("Ourmission/#FAQ")}
+            >
+              FAQ
+            </Link>
+          </li>
 
           <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
             <li className="text-2xl">Careers</li>
+          </Link>
+             <Link to="/Photos" onClick={() => handleNavLinkClick("/Photos")}>
+            <li className="text-2xl">Photos</li>
           </Link>
         </ul>
       )}

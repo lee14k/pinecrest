@@ -6,12 +6,14 @@ import Colorrow from "./Colorrow";
 import Imagegallery from "./Imagegallery";
 import Footer from "./Footer";
 import Ourmission from "./Ourmission";
+import Testimonials from "./Testimonials";
 function Home() {
   return (
     <div>
       <Headbanner />
       <Circlerow />
       <Colorrow />
+      <Testimonials />
       <Imagegallery />
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-    { name: 'Our Mission', href: '/Ourmissionn' },
+    { name: 'Our Mission', href: '/Ourmission' },
     { name: 'Contact Us', href: '/Contactus' },
     { name: 'Services', href: '/Services' },
     { name: 'Accessibility', href: '#' },
@@ -10,7 +10,7 @@ const navigation = {
   social: [
     {
       name: 'Facebook',
-      href: '#',
+      href: 'https://www.facebook.com/pages/Pinecrest-of-Lake-Geneva/104751166259267',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path

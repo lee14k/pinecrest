@@ -36,7 +36,11 @@ function Headbanner() {
           type="button"
           className="overlay-button rounded-md bg-emerald-600 px-6 py-3 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
-Contact Us        </button>
+            <a
+                href="/Contactus"
+               
+              >
+Contact Us      </a>  </button>
       </div>
     </div>
   );

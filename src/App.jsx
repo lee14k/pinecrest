@@ -8,11 +8,14 @@ import Contactus from "./components/Contactus";
 import Directions from "./components/Directions";
 import Photos from "./components/Photos";
 import Careers from "./components/Careers";
+import Conbar from "./components/Conbar";
 
 function App() {
 return (
     <div>
       <Router>
+        <Conbar phone="262-249-8900" address="N3367 County Rd NN, 
+Lake Geneva, WI 53147"/>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

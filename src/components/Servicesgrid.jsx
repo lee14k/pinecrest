@@ -15,7 +15,7 @@ export default function Servicesgrid() {
       title: "Housekeeping",
       link: "/organizationalculture",
       className: "griditem miditem",
-      description: "Bed and bath linens provided and laundered regularly.",
+      description: "Bed and bath linens provided and laundered regularly. Private half bath in each room. Pull cord alert systems in each suite by bed and in the bathroom for added security.",
       img: "/bedroom.jpeg",
     },
     {
@@ -30,7 +30,7 @@ export default function Servicesgrid() {
       link: "/arbitration",
       className: "griditem",
       description:
-        "Our staff is trained to provide a wide range of services, including medication management, assistance with activities of daily living, and coordination of care with physicians and other healthcare providers.",
+        "Our staff is here 24/7. Assistance with showering and bathing, dressing, grooming, and other personal care needs provided as needed",
       img: "/nursing.jpeg",
     },
     {
