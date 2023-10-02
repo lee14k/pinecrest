@@ -8,7 +8,7 @@ function Circlerow () {
           <div className="circle one">
             <div className="gradient"></div>
           </div>
-          <h2 className="text-4xl">Compassion</h2>
+          <h2 className="text-4xl">Care</h2>
         </div>
         <div className="circle-container">
           <div className="circle two"></div>
