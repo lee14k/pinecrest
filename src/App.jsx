@@ -24,6 +24,7 @@ Lake Geneva, WI 53147"/>
           <Route path="/Services" element={<Services />} />
           <Route path="/Directions" element={<Directions />} />
           <Route path="/Photos" element={<Photos />} />
+          <Route path="/Ourmission#FAQ" element={<Ourmission />} /> 
           <Route path="/Careers" element={<Careers />} />
         </Routes>
       </Router>

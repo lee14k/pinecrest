@@ -2,14 +2,16 @@ import "./Ourmission.css";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Missiongrid from "./Missiongrid";
+import { HashLink } from 'react-router-hash-link';
+
 function Ourmission() {
   return (
     <div>
 
      <Missiongrid/>
-     <a id="FAQ">
+     <div id="FAQ">
 <FAQ/>  
-</a>
+</div>
 <Footer/>  
     </div>
   );

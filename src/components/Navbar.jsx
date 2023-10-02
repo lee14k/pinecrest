@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -84,12 +85,12 @@ function Navbar() {
           </li>
           
           <li className="text-2xl">
-            <Link
-              to="Ourmission/#FAQ"
-              onClick={() => handleNavLinkClick("Ourmission/#FAQ")}
-            >
-              FAQ
-            </Link>
+                 <HashLink smooth to="/Ourmission/#FAQ">FAQ</HashLink>
+
+          </li>
+             <li className="text-2xl">
+                 <HashLink smooth to="/Contactus/#Directions">Directions</HashLink>
+
           </li>
 
           <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
