@@ -12,6 +12,7 @@ function Home() {
   return (
     <div>
       <Staticimage />
+      <h1 className="text-6xl">Welcome to Pinecrest of Lake Geneva</h1>
       <Circlerow />
       <Colorrow />
       <Testimonials />
