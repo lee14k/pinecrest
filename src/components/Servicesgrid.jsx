@@ -15,14 +15,14 @@ export default function Servicesgrid() {
       title: "Comfort",
       link: "/organizationalculture",
       className: "griditem miditem",
-      description: "Bed and bath linens provided and laundered regularly. Private half bath in each room. Pull cord alert systems in each suite by bed and in the bathroom for added security.",
+      description: "Spacious private rooms include a walkin closet and private half bath, with telephone jack and cable access. A bed, nightstand, and chest of drawers are provided.  (If you prefer, you may bring your own furniture.) Residents are encouraged to decorate room with personal items.",
       img: "/bedroom.jpeg",
     },
     {
       title: "Health Monitoring",
       link: "/arbitration",
       className: "griditem",
-      description: "On site beautician and barber services.",
+      description: "Weekly vitals as needed, monthly health assessments, and medication monitoring and administration .",
       img: "/missiongrid2.jpeg",
     },
     {
@@ -30,7 +30,7 @@ export default function Servicesgrid() {
       link: "/arbitration",
       className: "griditem",
       description:
-        "Our staff is here 24/7. Assistance with showering and bathing, dressing, grooming, and other personal care needs provided as needed",
+        "Our staff is here 24/7. Assistance with showering and bathing, dressing, grooming, and other personal care needs provided as needed. Individualized service plans developed for each resident. Beautician and barber services available.",
       img: "/nursing.jpeg",
     },
     {
@@ -38,32 +38,32 @@ export default function Servicesgrid() {
       link: "/arbitration",
       className: "griditem",
       description:
-        "With social activities including pet therapy, comfortable visitng areas for friends and family, and visiting entertainment, there is something for every resident here at Pinecrest of Lake Geneva",
+        "With social activities including pet therapy, gardening, grilling comfortable visiting areas for friends and family, and visiting entertainment, there is something for every resident here at Pinecrest of Lake Geneva",
       img: "/activities.jpeg",
     },
     {
       title: "Housekeeping",
       link: "/arbitration",
       className: "griditem",
-      img: "/spiritual.jpeg",
+      img: "/commonarea.jpeg",
            description:
-        "Visiting clergy and spiritual services are available to all residents.",
+        "Bath and bed linens are provided, as well as housekeeping and laundry services.",
     },
       {
       title: "Security",
       link: "/arbitration",
       className: "griditem",
-      img: "/spiritual.jpeg",
+      img: "/fireplace.jpeg",
            description:
-        "Visiting clergy and spiritual services are available to all residents.",
+        "Pull cord alert systems in each suite by bed and in the bathroom for added security.",
     },
       {
       title: "Convenience",
       link: "/arbitration",
       className: "griditem",
-      img: "/spiritual.jpeg",
+      img: "/homeone.jpeg",
            description:
-        "Visiting clergy and spiritual services are available to all residents.",
+        "Wheelchair accessible transporation services can be arranged",
     },
       {
       title: "Spiritual Services",
