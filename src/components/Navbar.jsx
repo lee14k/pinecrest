@@ -41,7 +41,7 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar rounded-md bg-emerald-600 px-6 py-3 text-xl font-semibold text-white shadow-sm ">
       {typeof window !== "undefined" && isMobile && (
         <div
           className={`hamburger-icon ${showMobile && !dropdown ? "open" : ""}`}
@@ -55,7 +55,7 @@ function Navbar() {
       {(showMobile || !isMobile || dropdown) && (
 <ul className={`nav ${dropdown ? "open" : ""} ${isMobile ? "mobile" : ""}`}>
         
-          <li className="text-2xl">
+          <li className="text-2xl ">
             <Link to="/" onClick={() => handleNavLinkClick("/")}>
               Home
             </Link>

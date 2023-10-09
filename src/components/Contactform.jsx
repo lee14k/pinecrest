@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
@@ -34,10 +20,10 @@ export default function Contactform() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Call Pinecrest of Lake Geneva Today
+        <h2 className="rounded-md bg-emerald-600 px-6 py-3  font-semibold text-white shadow-sm text-4xl">Welcome to Pinecrest of Lake Geneva
 </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-Or use this form to schedule a tour, get a free assessment, ask us a question or leave us a comment.
+          We know that choosing an assisted living community where your loved one will enjoy quality of life can be difficult. Our goal is to provide unequaled and individualized care for the seniors who reside with us. Let Pinecrest be the solution! Use this form to schedule a tour, get a free assessment, ask us a question or leave us a comment.
 
         </p>
       </div>

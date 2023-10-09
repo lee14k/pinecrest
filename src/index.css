@@ -185,4 +185,9 @@ text-shadow: 2px 2px 4px #000000;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
+.conbar {
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
 }

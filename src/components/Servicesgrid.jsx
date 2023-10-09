@@ -4,7 +4,7 @@ export default function Servicesgrid() {
   // Define the services data
   const services = [
     {
-      title: "Meals",
+      title: "Dietary",
       link: "/mediation",
       className: "griditem",
       description:
@@ -12,21 +12,21 @@ export default function Servicesgrid() {
       img: "/meals.jpeg",
     },
     {
-      title: "Housekeeping",
+      title: "Comfort",
       link: "/organizationalculture",
       className: "griditem miditem",
       description: "Bed and bath linens provided and laundered regularly. Private half bath in each room. Pull cord alert systems in each suite by bed and in the bathroom for added security.",
       img: "/bedroom.jpeg",
     },
     {
-      title: "Grooming",
+      title: "Health Monitoring",
       link: "/arbitration",
       className: "griditem",
       description: "On site beautician and barber services.",
       img: "/missiongrid2.jpeg",
     },
     {
-      title: "Nursing Services",
+      title: "Personal Care",
       link: "/arbitration",
       className: "griditem",
       description:
@@ -34,7 +34,7 @@ export default function Servicesgrid() {
       img: "/nursing.jpeg",
     },
     {
-      title: "Activities",
+      title: "Socialization",
       link: "/arbitration",
       className: "griditem",
       description:
@@ -42,6 +42,30 @@ export default function Servicesgrid() {
       img: "/activities.jpeg",
     },
     {
+      title: "Housekeeping",
+      link: "/arbitration",
+      className: "griditem",
+      img: "/spiritual.jpeg",
+           description:
+        "Visiting clergy and spiritual services are available to all residents.",
+    },
+      {
+      title: "Security",
+      link: "/arbitration",
+      className: "griditem",
+      img: "/spiritual.jpeg",
+           description:
+        "Visiting clergy and spiritual services are available to all residents.",
+    },
+      {
+      title: "Convenience",
+      link: "/arbitration",
+      className: "griditem",
+      img: "/spiritual.jpeg",
+           description:
+        "Visiting clergy and spiritual services are available to all residents.",
+    },
+      {
       title: "Spiritual Services",
       link: "/arbitration",
       className: "griditem",
