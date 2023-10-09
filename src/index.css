@@ -172,6 +172,12 @@ text-shadow: 2px 2px 4px #000000;
     height:450px;
   }
   
+.staticban {
+  background-image: url('./banner.jpeg');
+  height:700px;
+  width:100%;
+  background-size:cover;
+}
 
 @media screen and (max-width: 1200px) {
 .gridwrapper {

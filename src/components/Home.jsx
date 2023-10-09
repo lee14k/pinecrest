@@ -6,11 +6,12 @@ import Colorrow from "./Colorrow";
 import Imagegallery from "./Imagegallery";
 import Footer from "./Footer";
 import Ourmission from "./Ourmission";
+import Staticimage from './Staticimage'
 import Testimonials from "./Testimonials";
 function Home() {
   return (
     <div>
-      <Headbanner />
+      <Staticimage />
       <Circlerow />
       <Colorrow />
       <Testimonials />

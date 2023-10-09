@@ -9,7 +9,6 @@ const images = [
   './pc2.jpg',
   './pc3.jpg',
   './pc4.jpeg',
-  // add more URLs as needed
 ];
 
 function Photoslider() {
