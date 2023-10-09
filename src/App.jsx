@@ -9,13 +9,18 @@ import Directions from "./components/Directions";
 import Photos from "./components/Photos";
 import Careers from "./components/Careers";
 import Conbar from "./components/Conbar";
+import Privacy from "./components/Privacy";
+import Accessibility from "./components/Accessibility";
 
 function App() {
-return (
+  return (
     <div>
       <Router>
-        <Conbar phone="262-249-8900" address="N3367 County Rd NN, 
-Lake Geneva, WI 53147"/>
+        <Conbar
+          phone="262-249-8900"
+          address="N3367 County Rd NN, 
+Lake Geneva, WI 53147"
+        />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,8 +29,10 @@ Lake Geneva, WI 53147"/>
           <Route path="/Services" element={<Services />} />
           <Route path="/Directions" element={<Directions />} />
           <Route path="/Photos" element={<Photos />} />
-          <Route path="/Ourmission#FAQ" element={<Ourmission />} /> 
+          <Route path="/Ourmission#FAQ" element={<Ourmission />} />
           <Route path="/Careers" element={<Careers />} />
+          <Route path="/Privacy" element={<Privacy />} />
+          <Route path="/Accessibility" element={<Accessibility />} />
         </Routes>
       </Router>
     </div>

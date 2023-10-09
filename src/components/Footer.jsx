@@ -4,8 +4,8 @@ const navigation = {
     { name: 'Our Mission', href: '/Ourmission' },
     { name: 'Contact Us', href: '/Contactus' },
     { name: 'Services', href: '/Services' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
+    { name: 'Accessibility', href: '/Accessibility' },
+    { name: 'Privacy Policy', href: '/Privacy' },
   ],
   social: [
     {
