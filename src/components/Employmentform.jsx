@@ -40,7 +40,7 @@ export default function Employmentform() {
         <div />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="rounded-md bg-emerald-600 px-6 py-3 text-4xl font-semibold text-white shadow-sm">
           Looking for a caregiver career?
         </h2>
       </div>

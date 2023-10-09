@@ -19,7 +19,7 @@ function Circlerow () {
           <h2 className="text-4xl">Comfort</h2>
         </div>
       </div>
-      <p>
+      <p className='mt-10 mx-10 grid max-w-xl grid-cols-1 gap-8 text-xl leading-7 text-gray-700 lg:max-w-none lg:grid-cols-1'>
         We know that choosing an assisted living community where your loved one will enjoy the best quality of life can be difficult and frustrating.
 You want a place that offers all the comforts of home with the assurance that the staff respects the person you love and will keep them safe.
 It is not an easy choice and we make transitioning from living at home to living in our adult living facility as smooth as possible. It takes time to understand the needs of our residents.

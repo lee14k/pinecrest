@@ -16,11 +16,17 @@ const facebook = {
 
 export default function Conbar({ phone, address }) {
   return (
-    <div className="flex gap-10 justify-center my-10 conbar">
+    <div className="flex gap-10 justify-evenly my-10 conbar">
       <a href="/">
                 <img className="logo" src='./pinecrestlogo.png'/>
 </a>
-        <div className="mt-5">
+        
+        
+      <div className="mt-5">{phone}</div>
+      <div className="mt-5">
+    {address}
+      </div>
+      <div className="mt-5">
           
                {facebook.social.map((item) => (
             <a
@@ -33,11 +39,6 @@ export default function Conbar({ phone, address }) {
             </a>
           ))}
         </div>
-        
-      <div className="mt-5">{phone}</div>
-      <div className="mt-5">
-    {address}
-      </div>
     </div>
   );
 }
