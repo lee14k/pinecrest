@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const navigation = {
   main: [
@@ -75,15 +76,26 @@ const navigation = {
 }
 
 export default function Footer() {
+  const history = useHistory();
+
+  const handleNavigation = (path) => {
+    history.push(path); // Navigate to the desired path
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }
+
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
-              <Link to={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+              {/* Modified Link to use the onClick event */}
+              <span 
+                onClick={() => handleNavigation(item.href)}
+                className="text-sm leading-6 text-gray-600 hover:text-gray-900 cursor-pointer"
+              >
                 {item.name}
-              </Link>
+              </span>
             </div>
           ))}
         </nav>
