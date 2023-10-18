@@ -19,14 +19,14 @@ const facebook = {
 export default function Conbar({ phone, address }) {
   return (
     <div className="flex my-10 mx-0 items-center justify-evenly conbar">
-      <div className="flex flex-col mx-2">
+      <div className="flex flex-col mx-0">
         <div> {phone}</div>
         <div> {address}</div>
       </div>
       <a href="/">
         <img className="conlog" src="./pinecrestlogo.png" />
       </a>
-      <div className="mt-5 mx-20">
+      <div className="mt-5 mx-32">
         {facebook.social.map((item) => (
           <a
             key={item.name}

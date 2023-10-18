@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const navigation = {
   main: [
@@ -76,10 +76,10 @@ const navigation = {
 }
 
 export default function Footer() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleNavigation = (path) => {
-    history.push(path); // Navigate to the desired path
+    navigate(path); // Navigate to the desired path
     window.scrollTo(0, 0); // Scroll to the top of the page
   }
 
@@ -90,12 +90,12 @@ export default function Footer() {
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
               {/* Modified Link to use the onClick event */}
-              <span 
+              <button 
                 onClick={() => handleNavigation(item.href)}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900 cursor-pointer"
+                className="text-sm leading-6 text-gray-600 hover:text-gray-900 cursor-pointer bg-transparent border-none"
               >
                 {item.name}
-              </span>
+              </button>
             </div>
           ))}
         </nav>
@@ -115,6 +115,7 @@ export default function Footer() {
           &copy; 2023 Pinecrest of Lake Geneva, All rights reserved.
         </p>
       </div>
+      {/* ... */}
     </footer>
-  )
+  );
 }
