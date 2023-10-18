@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
-    width:100%;
+  width: 100%;
 }
 .gridwrapper {
   display: grid;
@@ -17,11 +20,11 @@ body {
   height: 300px;
   display: flex;
   flex-direction: column;
-  border-radius:25px;
-  justify-content:space-evenly;
-  margin-left:10px;
-  margin-right:10px;
-  align-items:center;
+  border-radius: 25px;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
 }
 
 /* Grid layout */
@@ -75,46 +78,47 @@ body {
 }
 
 .spec {
-  background:linear-gradient(263deg, rgba(211,206,61,0.7) 0%, rgba(255, 255, 255, 0.82) 54%)
+  background: linear-gradient(
+    263deg,
+    rgba(211, 206, 61, 0.7) 0%,
+    rgba(255, 255, 255, 0.82) 54%
+  );
 }
 
 .gridhead {
-  font-size:2rem;
-  color:white;
-text-shadow: 2px 2px 4px #000000;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .slider {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-           background-size:cover;
+  position: relative;
+  width: 60%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
 
-  }
-  
-  .slidez {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-    z-index: 1;
+.slidez {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
 
-  }
-  
-  .slidez.active {
-    opacity: 0.9;
-    z-index: 2;
-    transition: opacity 1s ease-in-out;
-
-  }
-  /* Add these styles to your CSS or a separate stylesheet */
+.slidez.active {
+  opacity: 0.9;
+  z-index: 2;
+  transition: opacity 1s ease-in-out;
+}
+/* Add these styles to your CSS or a separate stylesheet */
 .arrow {
   position: absolute;
   top: 50%;
@@ -130,13 +134,13 @@ text-shadow: 2px 2px 4px #000000;
 .left-arrow {
   left: 10px;
   border-radius: 0 5px 5px 0;
-  z-index:10;
+  z-index: 10;
 }
 
 .right-arrow {
   right: 10px;
   border-radius: 5px 0 0 5px;
-  z-index:10;
+  z-index: 10;
 }
 
 /* Add a hover effect */
@@ -144,50 +148,56 @@ text-shadow: 2px 2px 4px #000000;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-  .indicator {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
+.indicator {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 0 5px;
+  opacity: 0.5;
+}
+
+.indicator-dot.active {
+  opacity: 1;
+}
+
+.map {
+  width: 100%;
+  height: 450px;
+}
+
+.staticban {
+  background-image: url("/banner.jpeg");
+  height: 700px;
+  width: 100%;
+  background-size: cover;
+}
+.conlog {
+  width: 600px;
+}
+
+.caveat {
+  font-family: "Caveat", cursive;
+}
+@media screen and (max-width: 1000px) {
+  .gridwrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .conbar {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 3;
   }
-  
-  .indicator-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ffffff;
-    margin: 0 5px;
-    opacity: 0.5;
-  }
-  
-  .indicator-dot.active {
-    opacity: 1;
-  }
-
-  .map{
-    width:100%;
-    height:450px;
-  }
-  
-.staticban {
-  background-image: url('/banner.jpeg');
-  height:700px;
-  width:100%;
-  background-size:cover;
-}
-
-@media screen and (max-width: 1200px) {
-.gridwrapper {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-}
-.conbar {
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-}
 }

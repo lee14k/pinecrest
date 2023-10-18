@@ -20,10 +20,10 @@ function Imagegallery() {
         <div className="gallery">
           <figure className="gallery__item gallery__item--1">
             <img
-              src="/commonarea.jpeg"
+              src="/newkitchen.jpg"
               alt="Gallery image 1"
               className="gallery__img"
-              onClick={() => handleOpenModal("/commonarea.jpeg")}
+              onClick={() => handleOpenModal("/newkitchen.jpg")}
             />
           </figure>
           <figure className="gallery__item gallery__item--2">
@@ -42,11 +42,11 @@ function Imagegallery() {
               onClick={() => handleOpenModal("/diningroom.jpeg")}
             />
           </figure>
-          <figure className="gallery__item gallery__item--4">
+          <figure className="gallery__item gallery__item--4 ">
             <img
               src="/fireplace.jpeg"
               alt="Gallery image 4"
-              className="gallery__img"
+              className="gallery__img fire"
               onClick={() => handleOpenModal("/fireplace.jpeg")}
             />
           </figure>

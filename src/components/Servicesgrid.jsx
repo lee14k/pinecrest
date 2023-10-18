@@ -15,8 +15,8 @@ export default function Servicesgrid() {
       title: "Comfort",
       link: "/organizationalculture",
       className: "griditem miditem",
-      description: "Spacious private rooms include a walkin closet and private half bath, with telephone jack and cable access. A bed, nightstand, and chest of drawers are provided.  (If you prefer, you may bring your own furniture.) Residents are encouraged to decorate room with personal items.",
-      img: "/bedroom.jpeg",
+      description: "Spacious private rooms include a walk-in closet and private half bath, with telephone jack and cable access. A bed, nightstand, and chest of drawers are provided.  (If you prefer, you may bring your own furniture.) Residents are encouraged to decorate room with personal items.",
+      img: "/comfort.jpg",
     },
     {
       title: "Health Monitoring",
@@ -38,14 +38,14 @@ export default function Servicesgrid() {
       link: "/arbitration",
       className: "griditem",
       description:
-        "With social activities including pet therapy, gardening, grilling comfortable visiting areas for friends and family, and visiting entertainment, there is something for every resident here at Pinecrest of Lake Geneva",
-      img: "/activities.jpeg",
+        "With social activities including pet therapy, gardening, outdoor BBQs, visiting entertainment, art projects, games and more, there is something for every resident at Pinecrest of Lake Geneva!",
+      img: "/missiongrid.jpeg",
     },
     {
       title: "Housekeeping",
       link: "/arbitration",
       className: "griditem",
-      img: "/commonarea.jpeg",
+      img: "/housekeeping.jpg",
            description:
         "Bath and bed linens are provided, as well as housekeeping and laundry services.",
     },
@@ -53,7 +53,7 @@ export default function Servicesgrid() {
       title: "Security",
       link: "/arbitration",
       className: "griditem",
-      img: "/fireplace.jpeg",
+      img: "/security.jpg",
            description:
         "Pull cord alert systems in each suite by bed and in the bathroom for added security.",
     },
@@ -61,7 +61,7 @@ export default function Servicesgrid() {
       title: "Convenience",
       link: "/arbitration",
       className: "griditem",
-      img: "/homeone.jpeg",
+      img: "/convenience.jpg",
            description:
         "Wheelchair accessible transporation services can be arranged",
     },
@@ -69,7 +69,7 @@ export default function Servicesgrid() {
       title: "Spiritual Services",
       link: "/arbitration",
       className: "griditem",
-      img: "/spiritual.jpeg",
+      img: "/spiritual.jpg",
            description:
         "Visiting clergy and spiritual services are available to all residents.",
     },
@@ -97,8 +97,9 @@ export default function Servicesgrid() {
               backgroundImage: `url(${
                 service.img || "default_image_path_here.jpg"
               })`,
-              backgroundSize: "cover",
+              backgroundSize: "60% 100%",
               backgroundPosition: "center",
+              backgroundRepeat:"no-repeat"
             }}
           >
             <h2 className="gridhead">{service.title}</h2>

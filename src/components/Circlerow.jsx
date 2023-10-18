@@ -20,11 +20,7 @@ function Circlerow () {
         </div>
       </div>
       <p className='mt-10 mx-10 grid max-w-xl grid-cols-1 gap-8 text-xl leading-7 text-gray-700 lg:max-w-none lg:grid-cols-1'>
-        We know that choosing an assisted living community where your loved one will enjoy the best quality of life can be difficult and frustrating.
-You want a place that offers all the comforts of home with the assurance that the staff respects the person you love and will keep them safe.
-It is not an easy choice and we make transitioning from living at home to living in our adult living facility as smooth as possible. It takes time to understand the needs of our residents.
-We listen closely to your questions and address your concerns before offering the customized level of care that works the best for each of our residents.
-We believe that the more information you have the easier it will be to decide that Pinecrest of Lake Geneva is your best option.
+    We know that choosing an assisted living community where your loved one will enjoy the best quality of life can be difficult and confusing.  It is not an easy choice and we make transitioning from living at home to living in our State licensed 12 room community based assisted living facility as smooth as possible. We listen closely to your questions and address your concerns before offering the customized level of care that works the best for each of our residents. We believe that the more information you have the easier it will be to decide that Pinecrest of Lake Geneva is your best option.
       </p>
     </div>
   );

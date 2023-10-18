@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "Are the rooms private?",
     answer:
-      "Yes, each of our twelve resident rooms are spacious and private and can be decorated based on the resident’s style.",
+      "Yes, each of our twelve resident rooms are spacious and include a large walk in closet and accessible pull cord alert system.  Each private room offered comes ready to decorate based on the resident’s individual taste and style. We can supply a twin sized bed, night stand, and dresser if needed. Residents are encouraged to hang pictures and personalize the room to help make it feel comfortable.",
   },
   {
     question: "Is there a bathroom inside each room?",
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "Can I continue seeing my own doctor?",
     answer:
-      "It is every resident’s right to continue seeing his / her own doctor if they so choose. Usually a resident will utilize one of the many quality physicians in the near by surrounding area as a matter of convenience. If at any time any of our residents wish to switch doctors for whatever reason our staff will gladly assist in locating and setting up all appointments. Pinecrest utilizes a Podiatrist who can treat resident foot care on site.",
+      "It is every resident’s right to continue seeing his / her own doctor if they so choose. Usually a resident will utilize one of the many quality physicians in the near by surrounding area as a matter of convenience. If at any time any of our residents wish to switch doctors for whatever reason our staff will gladly assist in locating and setting up all appointments.",
   },
   {
     question:
@@ -27,11 +27,7 @@ const faqs = [
     answer:
       "Not necessarily. Although no one can predict what happens with their health but we do strive to continue to provide top quality support and services to each resident here at Pinecrest even in the event of a health status change. Our staff will stay in contact with families, and legal representatives along the way so as to determine the most appropriate care options available.",
   },
-  {
-    question: "How are the meals?",
-    answer:
-      "Here at Pinecrest our staff work to design and put together a menu of nutritional offerings at each our our three meals served daily. The groceries are purchased at the local store markets and then prepared in the on site kitchen. Each meal is served to our residents in the dining room for their enjoyment and socialization. Snacks and beverages are offered each day in between meals.",
-  },
+
   {
     question: "How much does it cost?",
     answer:
@@ -41,13 +37,9 @@ const faqs = [
     question:
       "What happens if we can no longer afford to pay the monthly rate? Do you accept Medicaid / Medicare?",
     answer:
-      "We understand that certain financial situations can and do arise. Prior to a resident’s admission to Pinecrest we make it a point to refer each family or legal representative to speak with an advisor at the Aging and Disability Resource Center of Walworth County. This is a good source for Seniors to receive information and assistance on the various long term care options available. Here at Pinecrest we do not accept straight Medicaid / Medicare as payment, however, at present we do participate in a type of long term care funding program.",
+      "We understand that certain financial situations can and do arise. Prior to a resident’s admission to Pinecrest we make it a point to refer each family or legal representative to speak with an advisor at the Aging and Disability Resource Center of Walworth County. This is a good source for Seniors to receive information and assistance on the various long term care options available. Here at Pinecrest we do not accept straight Medicaid / Medicare as payment, however, at present we do participate in long term care funding programs.",
   },
-  {
-    question: "Can we decorate and hang pictures?",
-    answer:
-      "Each private room offered comes ready to decorate based on the resident’s individual taste and style. We can supply a twin sized bed, night stand, and dresser if needed. Residents are encouraged to hang pictures and personalize the room to help make it feel comfortable.",
-  },
+
   {
     question:
       "Will my loved one have to move if their health condition changes?",
@@ -59,19 +51,15 @@ const faqs = [
     answer:
       "Our staff can make arrangements for our residents to be transported to various appointments via an outside transport company to include a wheelchair accessible vehicle.",
   },
-  {
-    question: "What is the median age of the residents living there?",
-    answer:
-      "Our residents all are considered advanced age and each is over the age of 55. The opportunity for daily interaction and socialization for everyone is there and many close friendships have been developed within our extended family. A nice feature is the freedom to socialize with others living here and then the ability to relax in your own private room.",
-  },
+
   {
     question: "Will my loved one lose their independence after moving in?",
     answer:
-      "That can be a common misconception in any assisted living setting. Our goal is to provide unequaled and individualized care for our seniors who are unable to live alone. We are here and ready to assist in helping residents move toward functional independence in daily living and then to continue functioning as independently as possible. Pinecrest strives to provide an environment which will be the least restrictive but still stay compatible with the needs, care, and services established in the individualized service plan.",
+      "Pinecrest strives to provide an environment which will be the least restrictive but still stay compatible with the needs, care, and services established in the individualized service plan.",
   },
   {
     question:
-      "How is the medication management / administration work?",
+      "How are the medications managed and administered ?",
     answer:
       "All medications must first be prescribed in writing by the respective resident’s physician. We then work with our contracted pharmacy to package medications and then deliver to us. Our CBRF certified staff will administer and monitor all medications based on the instruction specifications. All medications are kept under lock and key when not in use.",
   },

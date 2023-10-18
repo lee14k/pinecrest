@@ -8,11 +8,13 @@ import Footer from "./Footer";
 import Ourmission from "./Ourmission";
 import Staticimage from './Staticimage'
 import Testimonials from "./Testimonials";
+
 function Home() {
   return (
     <div>
       <Staticimage />
       <h1 className="text-6xl">Welcome to Pinecrest of Lake Geneva</h1>
+      <h2 className="caveat text-4xl mb-16">Quality Assisted Living for Older Adults</h2>
       <Circlerow />
       <Colorrow />
       <Testimonials />

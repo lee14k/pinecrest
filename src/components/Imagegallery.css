@@ -33,6 +33,10 @@ body {
   display: block;
 }
 
+.fire {
+  object-position:25% 68%;
+}
+
 .gallery__item--1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -67,7 +71,7 @@ body {
 }
 
 .gallery__item--4 {
-  grid-column-start: 1;
+  grid-column-start:1;
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 6;

@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar rounded-md bg-emerald-600 px-6 py-3 text-xl font-semibold text-white shadow-sm ">
+    <div className="navbar rounded-md bg-emerald-600 px-6 text-xl font-semibold text-white shadow-sm ">
       {typeof window !== "undefined" && isMobile && (
         <div
           className={`hamburger-icon ${showMobile && !dropdown ? "open" : ""}`}
@@ -53,8 +53,11 @@ function Navbar() {
         </div>
       )}
       {(showMobile || !isMobile || dropdown) && (
-<ul className={`nav ${dropdown ? "open" : ""} ${isMobile ? "mobile" : ""}`}>
-        
+        <ul
+          className={`nav ${dropdown ? "open" : ""} ${
+            isMobile ? "mobile" : ""
+          }`}
+        >
           <li className="text-2xl ">
             <Link to="/" onClick={() => handleNavLinkClick("/")}>
               Home
@@ -68,13 +71,11 @@ function Navbar() {
               Our Mission
             </Link>
           </li>
-          <Link
-            to="/Contactus"
-            onClick={() => handleNavLinkClick("/Contactus")}
-          >
-            <li className="text-2xl">Contact Us</li>
-          </Link>
-
+          <li className="text-2xl">
+            <HashLink smooth to="/Ourmission/#FAQ">
+              FAQ
+            </HashLink>
+          </li>
           <li className="text-2xl">
             <Link
               to="/Services"
@@ -83,22 +84,24 @@ function Navbar() {
               Services
             </Link>
           </li>
-          
-          <li className="text-2xl">
-                 <HashLink smooth to="/Ourmission/#FAQ">FAQ</HashLink>
-
-          </li>
-             <li className="text-2xl">
-                 <HashLink smooth to="/Contactus/#Directions">Directions</HashLink>
-
-          </li>
-
+          <Link to="/Photos" onClick={() => handleNavLinkClick("/Photos")}>
+            <li className="text-2xl">Photos</li>
+          </Link>
           <Link to="/Careers" onClick={() => handleNavLinkClick("/Careers")}>
             <li className="text-2xl">Careers</li>
           </Link>
-             <Link to="/Photos" onClick={() => handleNavLinkClick("/Photos")}>
-            <li className="text-2xl">Photos</li>
+          <Link
+            to="/Contactus"
+            onClick={() => handleNavLinkClick("/Contactus")}
+          >
+            <li className="text-2xl">Contact Us</li>
           </Link>
+
+          <li className="text-2xl">
+            <HashLink smooth to="/Contactus/#Directions">
+              Directions
+            </HashLink>
+          </li>
         </ul>
       )}
     </div>

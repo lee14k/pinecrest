@@ -1,8 +1,8 @@
 const facebook = {
   social: [
     {
-      name: 'Facebook',
-      href: 'https://www.facebook.com/pages/Pinecrest-of-Lake-Geneva/104751166259267',
+      name: "Facebook",
+      href: "https://www.facebook.com/pages/Pinecrest-of-Lake-Geneva/104751166259267",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -12,33 +12,32 @@ const facebook = {
           />
         </svg>
       ),
-    },]}
+    },
+  ],
+};
 
 export default function Conbar({ phone, address }) {
   return (
-    <div className="flex gap-10 justify-evenly my-10 conbar">
-      <a href="/">
-                <img className="logo" src='./pinecrestlogo.png'/>
-</a>
-        
-        
-      <div className="mt-5">{phone}</div>
-      <div className="mt-5">
-    {address}
+    <div className="flex my-10 mx-0 items-center justify-evenly conbar">
+      <div className="flex flex-col mx-2">
+        <div> {phone}</div>
+        <div> {address}</div>
       </div>
-      <div className="mt-5">
-          
-               {facebook.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
-          ))}
-        </div>
+      <a href="/">
+        <img className="conlog" src="./pinecrestlogo.png" />
+      </a>
+      <div className="mt-5 mx-20">
+        {facebook.social.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="text-gray-400 hover:text-gray-500"
+          >
+            <span className="sr-only">{item.name}</span>
+            <item.icon className="h-16 w-16" aria-hidden="true" />
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
