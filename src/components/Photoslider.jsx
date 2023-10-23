@@ -4,7 +4,6 @@ import Footer from "./Footer";
 const images = [
   './sliderone.jpg', // replace with your image URLs
   './slidertwo.jpg', 
-  './sliderfive.jpg',
   './ns6.bmp',
   './ns7.bmp',
   './slider8.jpeg',
@@ -14,6 +13,7 @@ const images = [
   './ns5.bmp',
   './ns8.bmp',
   './flag.bmp',
+  './ns10.bmp'
 ];
 
 function Photoslider() {
