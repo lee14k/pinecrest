@@ -39,13 +39,6 @@ const faqs = [
     answer:
       "We understand that certain financial situations can and do arise. Prior to a resident’s admission to Pinecrest we make it a point to refer each family or legal representative to speak with an advisor at the Aging and Disability Resource Center of Walworth County. This is a good source for Seniors to receive information and assistance on the various long term care options available. Here at Pinecrest we do not accept straight Medicaid / Medicare as payment, however, at present we do participate in long term care funding programs.",
   },
-
-  {
-    question:
-      "Will my loved one have to move if their health condition changes?",
-    answer:
-      "Not necessarily. Although no one can predict what happens with their health but we do strive to continue to provide top quality support and services to each resident here at Pinecrest even in the event of a health status change. Our staff will stay in contact with families, and legal representatives along the way so as to determine the most appropriate care options available.",
-  },
   {
     question: "Do you provide transportation to and from various appointments?",
     answer:
