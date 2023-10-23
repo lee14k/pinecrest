@@ -15,7 +15,7 @@ Recognizing the challenges of aging, we are dedicated to encouraging a fulfillin
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
               <img
-                src="/ourmissionnew.jpg"
+                src="/flag.bmp"
                 alt=""
                 className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover object-top"
               />
