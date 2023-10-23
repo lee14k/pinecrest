@@ -11,7 +11,8 @@ const images = [
   './sliderseven.jpg',
   './slider8.jpeg',
   './pc4.jpeg',
-  './slider9.jpg'
+  './slider9.jpg',
+  './ns4.bmp',
 ];
 
 function Photoslider() {
