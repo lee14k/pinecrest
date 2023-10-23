@@ -200,4 +200,9 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .hometext {
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
