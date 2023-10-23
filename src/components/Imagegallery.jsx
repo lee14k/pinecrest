@@ -20,10 +20,10 @@ function Imagegallery() {
         <div className="gallery">
           <figure className="gallery__item gallery__item--1">
             <img
-              src="/newkitchen.jpg"
+              src="/ns3.bmp"
               alt="Gallery image 1"
               className="gallery__img"
-              onClick={() => handleOpenModal("/newkitchen.jpg")}
+              onClick={() => handleOpenModal("/ns3.bmp")}
             />
           </figure>
           <figure className="gallery__item gallery__item--2">

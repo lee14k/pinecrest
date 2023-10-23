@@ -6,12 +6,14 @@ const images = [
   './slidertwo.jpg', 
   './slidethree.jpg',
   './sliderfive.jpg',
-  './slidersix.jpg',
-  './sliderseven.jpg',
+  './ns6.bmp',
+  './ns7.bmp',
   './slider8.jpeg',
   './pc4.jpeg',
   './slider9.jpg',
   './ns4.bmp',
+  './ns5.bmp',
+  './ns8.bmp',
 ];
 
 function Photoslider() {
