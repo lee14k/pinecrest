@@ -5,7 +5,6 @@ const images = [
   './sliderone.jpg', // replace with your image URLs
   './slidertwo.jpg', 
   './slidethree.jpg',
-  './sliderfour.jpg',
   './sliderfive.jpg',
   './slidersix.jpg',
   './sliderseven.jpg',

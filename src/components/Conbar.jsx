@@ -16,11 +16,11 @@ const facebook = {
   ],
 };
 
-export default function Conbar({ phone, address }) {
+export default function Conbar({ address }) {
   return (
     <div className="flex my-10 mx-0 items-center justify-evenly conbar">
       <div className="flex flex-col mx-0">
-        <div> {phone}</div>
+      
         <div> {address}</div>
       </div>
       <a href="/">

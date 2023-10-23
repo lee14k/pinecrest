@@ -18,7 +18,7 @@ function App() {
       
       <Router>
         <Conbar
-          phone="262-249-8900"
+        
           address="N3367 County Rd NN, 
 Lake Geneva, WI 53147"
         />
