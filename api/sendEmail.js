@@ -1,69 +1,39 @@
-// pages/api/sendEmail.js
-
 import nodemailer from 'nodemailer';
 
-// Set up Nodemailer transporter
-const transporter = nodemailer.createTransport({
- host: process.env.SMTP_HOST,
+export default async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  const { firstName, lastName, email, phoneNumber, workHistories, driversLicense, over18, shiftPreference } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
     secure: true, // use SSL for port 465
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASSWORD,
-  },
-});
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
+    },
+  });
 
-export default async function handler(req, res) {
-  console.log(process.env.RECIPIENT_EMAIL)
-  if (req.method === 'POST') {
-    // Process a POST request
-    const { formType } = req.body; // Extract formType
-    let mailOptions;
+  let workHistoriesText = workHistories.map((history, index) => 
+    `History ${index + 1}:\nCompany: ${history.company}\nPosition: ${history.position}\nDuration: ${history.duration}\n`).join('\n');
 
-    if (formType === 'employment') {
-      // Destructure the form fields from req.body for the employment form
-      const {
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        workHistories,
-        driversLicense,
-        over18,
-        shiftPreference,
-      } = req.body;
+  const mailData = {
+    from: process.env.SMTP_USER, // sender address
+    to: process.env.RECIPIENT_EMAIL, // list of receivers
+    subject: 'New Employment Form Submission',
+    text: `New employment form submission:
+      \nName: ${firstName} ${lastName}
+      \nEmail: ${email}
+      \nPhone: ${phoneNumber}
+      \nShift Preference: ${shiftPreference}
+      \nOver 18: ${over18 ? 'Yes' : 'No'}
+      \nDriver's License: ${driversLicense ? 'Yes' : 'No'}
+      \n\nWork Histories:\n${workHistoriesText}`
+  };
 
-      // Construct the email message for the employment form
-      let emailText = `New employment form submission:\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phoneNumber}\nShift Preference: ${shiftPreference}\nOver 18: ${over18 ? 'Yes' : 'No'}\nDriver's License: ${driversLicense ? 'Yes' : 'No'}\n\nWork Histories:\n`;
-
-      workHistories.forEach((history, index) => {
-        emailText += `\nHistory ${index + 1}:\nCompany: ${history.company}\nPosition: ${history.position}\nDuration: ${history.duration}\n`;
-      });
-
-      // Set up the mail options for the employment form
-      mailOptions = {
-        from: email,
-        to: process.env.SMTP_USER,
-        subject: 'New Employment Form Submission',
-        text: emailText,
-      };
-    } else if (formType === 'contact') {
-      // Destructure the form fields from req.body for the contact form
-      const { firstName, lastName, email, phoneNumber, message } = req.body;
-
-      // Construct the email message for the contact form
-      const emailText = `You have a new contact form submission from: ${firstName} ${lastName}. Contact information: Email - ${email}, Phone - ${phoneNumber}\n\nMessage: ${message}`;
-
-      // Set up the mail options for the contact form
-      mailOptions = {
-        from: process.env.SMTP_USER,
-        to: process.env.RECIPIENT_EMAIL,
-        subject: 'New Contact Form Submission',
-        text: emailText,
-      };
-    }
-
-    // Send the email
   try {
     await transporter.sendMail(mailData);
     res.status(200).send('Email sent successfully');
@@ -71,6 +41,4 @@ export default async function handler(req, res) {
     console.error(`Email sending error: ${error}`);
     res.status(500).send('Internal Server Error');
   }
-};
-
 }
