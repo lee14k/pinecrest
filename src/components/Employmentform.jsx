@@ -51,13 +51,22 @@ export default function Employmentform() {
   const [agreed, setAgreed] = useState(false);
 
   const [workHistories, setWorkHistories] = useState([
-    { company: "", position: "", duration: "" }, // Start with one entry
+    { company: "", position: "", startDate: "", endDate: "", jobDuties: "", currentlyEmployed: false },
   ]);
+
+  const handleWorkHistoryChange = (index, field, value) => {
+    const updatedWorkHistories = [...workHistories];
+    updatedWorkHistories[index] = {
+      ...updatedWorkHistories[index],
+      [field]: value,
+    };
+    setWorkHistories(updatedWorkHistories);
+  };
 
   const addWorkHistory = () => {
     setWorkHistories([
       ...workHistories,
-      { company: "", position: "", duration: "" },
+      { company: "", position: "", startDate: "", endDate: "", jobDuties: "", currentlyEmployed: false },
     ]);
   };
 
@@ -174,88 +183,74 @@ export default function Employmentform() {
                 Work History
               </h3>
 
-              {workHistories.map((history, index) => (
-                <div key={index} className="mb-4">
-                  {/* Company Field */}
-                  <label
-                    htmlFor={`company-${index}`}
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    name={`company-${index}`}
-                    id={`company-${index}`}
-                    placeholder="Company name"
-                    value={history.company}
-                    onChange={(e) =>
-                      handleWorkHistoryChange(index, "company", e.target.value)
-                    }
-                    className="block w-full ..."
-                  />
-                  <input
-                    type="text"
-                    name={`company-${index}`}
-                    id={`company-${index}`}
-                    placeholder="Position"
-                    value={history.company}
-                    // ... onChange handler to update this specific history's company value
-                    className="block w-full ..."
-                  />
-                  <input
-                    type="text"
-                    name={`company-${index}`}
-                    id={`company-${index}`}
-                    placeholder="Date Started"
-                    value={history.company}
-                    // ... onChange handler to update this specific history's company value
-                    className="block w-full ..."
-                  />
-                  <input
-                    type="text"
-                    name={`company-${index}`}
-                    id={`company-${index}`}
-                    placeholder="Date Ended"
-                    value={history.company}
-                    // ... onChange handler to update this specific history's company value
-                    className="block w-full ..."
-                  />
-                  <input
-                    type="text"
-                    name={`company-${index}`}
-                    id={`company-${index}`}
-                    placeholder="Job duties"
-                    value={history.company}
-                    // ... onChange handler to update this specific history's company value
-                    className="block w-full ..."
-                  />
-                  <label
-                    htmlFor="currently-employed"
-                    className="ml-3 block text-sm font-medium text-gray-900"
-                  >
-                    Currently employed{" "}
-                  </label>
-                  <input
-                    type="checkbox"
-                    name={`company-${index}`}
-                    id={`company-${index}`}
-                    placeholder="Current Position?"
-                    value={history.company}
-                    // ... onChange handler to update this specific history's company value
-                    className="block w-full ..."
-                  />
-                  {/* ... Similarly, input fields for "Position" and "Duration" */}
-                </div>
-              ))}
+              
+    {workHistories.map((history, index) => (
+      <div key={index} className="mb-4">
+        {/* Company Name Field */}
+        <input
+          type="text"
+          name={`company-${index}`}
+          id={`company-${index}`}
+          placeholder="Company name"
+          value={history.company}
+          onChange={(e) => handleWorkHistoryChange(index, "company", e.target.value)}
+          className="block w-full ..."
+        />
+        {/* Position Field */}
+        <input
+          type="text"
+          name={`position-${index}`}
+          id={`position-${index}`}
+          placeholder="Position"
+          value={history.position}
+          onChange={(e) => handleWorkHistoryChange(index, "position", e.target.value)}
+          className="block w-full ..."
+        />
+        {/* Start Date Field */}
+        <input
+          type="text"
+          name={`startDate-${index}`}
+          id={`startDate-${index}`}
+          placeholder="Start Date"
+          value={history.startDate}
+          onChange={(e) => handleWorkHistoryChange(index, "startDate", e.target.value)}
+          className="block w-full ..."
+        />
+        {/* End Date Field */}
+        <input
+          type="text"
+          name={`endDate-${index}`}
+          id={`endDate-${index}`}
+          placeholder="End Date"
+          value={history.endDate}
+          onChange={(e) => handleWorkHistoryChange(index, "endDate", e.target.value)}
+          className="block w-full ..."
+        />
+        {/* Job Duties Field */}
+        <input
+          type="text"
+          name={`jobDuties-${index}`}
+          id={`jobDuties-${index}`}
+          placeholder="Job Duties"
+          value={history.jobDuties}
+          onChange={(e) => handleWorkHistoryChange(index, "jobDuties", e.target.value)}
+          className="block w-full ..."
+        />
+        {/* Currently Employed Checkbox */}
+        <label htmlFor={`currently-employed-${index}`}>
+          Currently employed
+        </label>
+        <input
+          type="checkbox"
+          name={`currently-employed-${index}`}
+          id={`currently-employed-${index}`}
+          checked={history.currentlyEmployed}
+          onChange={(e) => handleWorkHistoryChange(index, "currentlyEmployed", e.target.checked)}
+        />
+      </div>
+    ))}
 
-              <button
-                type="button"
-                onClick={addWorkHistory}
-                className="mt-4 px-4 py-2 text-indigo-600 underline"
-              >
-                Add another work history
-              </button>
+    <button onClick={addWorkHistory}>Add another work history</button>
             </div>
           </div>
           <div className="flex items-center sm:col-span-2">
