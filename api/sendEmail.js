@@ -64,16 +64,13 @@ export default async function handler(req, res) {
     }
 
     // Send the email
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error(error);
-        return res.status(500).json({ error: 'Error sending email' });
-      }
-      return res.status(200).json({ message: 'Email sent successfully', info });
-    });
-  } else {
-    // Handle any other HTTP method
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+  try {
+    await transporter.sendMail(mailData);
+    res.status(200).send('Email sent successfully');
+  } catch (error) {
+    console.error(`Email sending error: ${error}`);
+    res.status(500).send('Internal Server Error');
   }
+};
+
 }
