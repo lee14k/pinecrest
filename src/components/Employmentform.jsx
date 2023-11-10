@@ -20,9 +20,17 @@ export default function Employmentform() {
       over18: event.target["over-18"].checked,
       shiftPreference: event.target["shift-preference"].value,
     };
+    const handleWorkHistoryChange = (index, field, value) => {
+      const updatedWorkHistories = [...workHistories];
+      updatedWorkHistories[index] = {
+        ...updatedWorkHistories[index],
+        [field]: value,
+      };
+      setWorkHistories(updatedWorkHistories);
+    };
 
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -181,7 +189,9 @@ export default function Employmentform() {
                     id={`company-${index}`}
                     placeholder="Company name"
                     value={history.company}
-                    // ... onChange handler to update this specific history's company value
+                    onChange={(e) =>
+                      handleWorkHistoryChange(index, "company", e.target.value)
+                    }
                     className="block w-full ..."
                   />
                   <input
