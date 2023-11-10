@@ -5,7 +5,7 @@ export default async (req, res) => {
     return res.status(405).end();
   }
 
-  const { firstName, lastName, email, message } = req.body;
+  const { firstName, lastName, email, phoneNumber, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -24,6 +24,7 @@ export default async (req, res) => {
     text: `
       Name: ${firstName} ${lastName}
       Email: ${email}
+      Phone Number: ${phoneNumber}
       Message: ${message}
     `,
   };
