@@ -41,8 +41,8 @@ export default async function handler(req, res) {
 
       // Set up the mail options for the employment form
       mailOptions = {
-        from: process.env.SMTP_USER,
-        to: process.env.RECIPIENT_EMAIL,
+        from: email,
+        to: process.env.SMTP_USER,
         subject: 'New Employment Form Submission',
         text: emailText,
       };
