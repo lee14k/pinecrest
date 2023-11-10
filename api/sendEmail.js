@@ -14,6 +14,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async function handler(req, res) {
+  console.log(process.env.RECIPIENT_EMAIL)
   if (req.method === 'POST') {
     // Process a POST request
     const { formType } = req.body; // Extract formType
@@ -65,7 +66,7 @@ export default async function handler(req, res) {
     // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log(process.env.RECIPIENT_EMAIL) ;
+        console.error(error);
         return res.status(500).json({ error: 'Error sending email' });
       }
       return res.status(200).json({ message: 'Email sent successfully', info });
