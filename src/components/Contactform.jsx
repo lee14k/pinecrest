@@ -1,36 +1,74 @@
-import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
+import { useState } from "react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Switch } from "@headlessui/react";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Contactform() {
-  const [agreed, setAgreed] = useState(false)
+  const [agreed, setAgreed] = useState(false);
+ const handleSubmit = async (event) => {
+    event.preventDefault();
 
+    const formData = {
+      firstName: event.target["first-name"].value,
+      lastName: event.target["last-name"].value,
+      email: event.target.email.value,
+      phoneNumber: event.target["phone-number"].value,
+      message: event.target.message.value,
+    };
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Handle success - show a message to the user, clear the form, etc.
+        console.log("Form submitted successfully");
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("There was an error submitting the form:", error);
+    }
+  };
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
       >
-        <div
-          
-        />
+        <div />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="rounded-md bg-emerald-600 px-6 py-3  font-semibold text-white shadow-sm text-4xl">Welcome to Pinecrest of Lake Geneva
-</h2>
+        <h2 className="rounded-md bg-emerald-600 px-6 py-3  font-semibold text-white shadow-sm text-4xl">
+          Welcome to Pinecrest of Lake Geneva
+        </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          We know that choosing an assisted living community where your loved one will enjoy quality of life can be difficult. Our goal is to provide unequaled and individualized care for the seniors who reside with us. Let Pinecrest be the solution! Use this form to schedule a tour, get a free assessment, ask us a question or leave us a comment.
-
+          We know that choosing an assisted living community where your loved
+          one will enjoy quality of life can be difficult. Our goal is to
+          provide unequaled and individualized care for the seniors who reside
+          with us. Let Pinecrest be the solution! Use this form to schedule a
+          tour, get a free assessment, ask us a question or leave us a comment.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form
+        onSubmit={handleSubmit}
+        method="POST"
+        className="mx-auto mt-16 max-w-xl sm:mt-20"
+      >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="first-name"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               First name
             </label>
             <div className="mt-2.5">
@@ -41,10 +79,15 @@ export default function Contactform() {
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
+              <input type="hidden" name="formType" value="contact" />
+
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Last name
             </label>
             <div className="mt-2.5">
@@ -57,9 +100,12 @@ export default function Contactform() {
               />
             </div>
           </div>
-       
+
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Email
             </label>
             <div className="mt-2.5">
@@ -73,7 +119,10 @@ export default function Contactform() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Phone number
             </label>
             <div className="relative mt-2.5">
@@ -105,7 +154,10 @@ export default function Contactform() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Message
             </label>
             <div className="mt-2.5">
@@ -114,7 +166,7 @@ export default function Contactform() {
                 id="message"
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                defaultValue={''}
+                defaultValue={""}
               />
             </div>
           </div>
@@ -124,22 +176,22 @@ export default function Contactform() {
                 checked={agreed}
                 onChange={setAgreed}
                 className={classNames(
-                  agreed ? 'bg-indigo-600' : 'bg-gray-200',
-                  'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                  agreed ? "bg-indigo-600" : "bg-gray-200",
+                  "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 )}
               >
                 <span className="sr-only">Agree to policies</span>
                 <span
                   aria-hidden="true"
                   className={classNames(
-                    agreed ? 'translate-x-3.5' : 'translate-x-0',
-                    'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out'
+                    agreed ? "translate-x-3.5" : "translate-x-0",
+                    "h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
                   )}
                 />
               </Switch>
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
-              By selecting this, you agree to our{' '}
+              By selecting this, you agree to our{" "}
               <a href="#" className="font-semibold text-indigo-600">
                 privacy&nbsp;policy
               </a>
@@ -157,5 +209,5 @@ export default function Contactform() {
         </div>
       </form>
     </div>
-  )
+  );
 }
