@@ -22,7 +22,7 @@ export default async (req, res) => {
 
   const mailData = {
     from: process.env.SMTP_USER, // sender address
-    to: process.env.RECIPIENT_EMAIL, // list of receivers
+    to: process.env.SMTP_USER, // list of receivers
     subject: 'New Employment Form Submission',
     text: `New employment form submission:
       \nName: ${firstName} ${lastName}
