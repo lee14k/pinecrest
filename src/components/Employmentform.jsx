@@ -7,6 +7,8 @@ function classNames(...classes) {
 }
 
 export default function Employmentform() {
+    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -39,6 +41,8 @@ export default function Employmentform() {
       });
 
       if (response.ok) {
+                setIsModalOpen(true);
+
         // Handle success - show a message to the user, clear the form, etc.
         console.log("Form submitted successfully");
       } else {
@@ -69,7 +73,9 @@ export default function Employmentform() {
       { company: "", position: "", startDate: "", endDate: "", jobDuties: "", currentlyEmployed: false },
     ]);
   };
-
+    const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
@@ -336,6 +342,21 @@ export default function Employmentform() {
           >
             Let's talk
           </button>
+              {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="modal-bg fixed inset-0 bg-black opacity-50"></div>
+          <div className="modal-content bg-white p-4 rounded-lg shadow-lg z-50">
+            <p className="text-lg font-semibold text-green-600">Submission Successful!</p>
+            <p>Your submission was successful. Thank you!</p>
+            <button
+              onClick={closeModal}
+              className="mt-4 bg-red-600 text-white py-2 px-4 rounded hover:bg-red-500"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
         </div>
       </form>
     </div>
