@@ -8,6 +8,8 @@ function classNames(...classes) {
 
 export default function Contactform() {
   const [agreed, setAgreed] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+
  const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -37,6 +39,9 @@ export default function Contactform() {
     } catch (error) {
       console.error("There was an error submitting the form:", error);
     }
+  };
+     const closeModal = () => {
+    setIsModalOpen(false);
   };
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -173,12 +178,13 @@ export default function Contactform() {
                 />
               </Switch>
             </div>
-            <Switch.Label className="text-sm leading-6 text-gray-600">
+                <Switch.Label className="text-sm leading-6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <a href="#" className="font-semibold text-indigo-600">
+              <button>
+              <a href="/Privacy" className="font-semibold text-green-600">
                 privacy&nbsp;policy
               </a>
-              .
+            </button>
             </Switch.Label>
           </Switch.Group>
         </div>
@@ -189,6 +195,21 @@ export default function Contactform() {
           >
             Let's talk
           </button>
+                 {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="modal-bg fixed inset-0 bg-black opacity-50"></div>
+          <div className="modal-content bg-white p-4 rounded-lg shadow-lg z-50">
+            <p className="text-lg font-semibold text-green-600">Submission Successful!</p>
+            <p>Your submission was successful. Thank you!</p>
+            <button
+              onClick={closeModal}
+              className="mt-4 bg-red-600 text-white py-2 px-4 rounded hover:bg-red-500"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
         </div>
       </form>
     </div>
