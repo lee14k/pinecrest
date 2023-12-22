@@ -31,6 +31,8 @@ export default function Contactform() {
       });
 
       if (response.ok) {
+                setIsModalOpen(true);
+
         // Handle success - show a message to the user, clear the form, etc.
         console.log("Form submitted successfully");
       } else {
