@@ -19,7 +19,7 @@ export default async (req, res) => {
 
   const mailData = {
     from: email,
-    to:process.env.SMTP_USER, // you can change this to where you want to receive the emails
+    to:process.env.RECIPIENT_EMAIL, // you can change this to where you want to receive the emails
     subject: 'New Contact Form Submission',
     text: `
       Name: ${firstName} ${lastName}
